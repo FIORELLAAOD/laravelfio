@@ -1,5 +1,5 @@
 [phases.setup]
-nixPackages = ["php81", "php81Extensions.pdo_mysql", "php81Extensions.gd"]
+nixPackages = ["php81", "php81Extensions.pdo_mysql", "php81Extensions.gd", "php81Packages.composer"]
 
 [phases.install]
 cmds = [
