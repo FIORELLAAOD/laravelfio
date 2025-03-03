@@ -1,5 +1,5 @@
 [phases.setup]
-nixPackages = ["php81", "php81Extensions.pdo_mysql", "php81Extensions.gd", "nodejs-18_x", "nodejs", "npm"]
+nixPackages = ["php81", "php81Extensions.pdo_mysql", "php81Extensions.gd"]
 
 [phases.install]
 cmds = [
@@ -8,8 +8,6 @@ cmds = [
 
 [phases.build]
 cmds = [
-  "npm ci || npm install",
-  "npm run prod || npm run production || npm run build || echo 'Omitiendo compilación de assets'",
   "php artisan config:cache",
   "php artisan route:cache",
   "php artisan view:cache"
